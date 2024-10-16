@@ -1,0 +1,18 @@
+{% extends "mainapp/base.html" %}
+
+{%block title%}Новости{%endblock%}
+
+{%block content%}
+<h2>Новости</h2>
+<ul>
+    {%for news in news_list%}
+        <li>
+            <a href="{%url 'news_detail' news.id%}">{{news.title}}</a> ({{news.created_at}})
+            <p>Автор:{{news.content}}</p>
+        </li>
+    {%empty%}
+        <li>Новостей нет.</li>
+    {%endfor%}
+</ul>
+{%endblock%}
+                

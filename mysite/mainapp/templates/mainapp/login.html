@@ -1,0 +1,17 @@
+{% extends "mainapp/base.html"%}
+
+{%block title%}Вход{%endblock%}
+
+{%block content%}
+<div id="wrapper">
+    <h1>Авторизация</h1>
+<form method="post"  id="signin" method="" action="" autocomplete="off" >
+{%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">></button> 
+    <p>forgot your password? <a href="../register/">click here</a></p>
+</form>
+</div>
+{%endblock%}
+
+                
